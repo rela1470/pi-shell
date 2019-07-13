@@ -24,7 +24,7 @@ cd ${RECORDED_DIR}
 for VIDEO_PATH in ${RECORDED_DIR}*; do
     VIDEO_FILE=$(basename ${VIDEO_PATH})
     FILE_TYPE="${VIDEO_FILE##*.}"
-    MP4_FILE="${MP4_DIR}${VIDEO_FILE}.mp4"
+    MP4_FILE="${MP4_DIR}${VIDEO_FILE%.*}.mp4"
 
     if [ ${FILE_TYPE} = ${ENC_TYPE} ] && [ ! -e ${MP4_FILE} ]; then
         ${FFMPEG_CMD} -y -i ${RECORDED_DIR}${VIDEO_FILE} -vcodec h264_omx -b:v 6000k -vf pullup -r 24000/1001 -vsync 1 -qmin 10 -qmax 51 -qdiff 8 -i_qfactor 1.40 -qcomp 0.6 ${MP4_FILE}
