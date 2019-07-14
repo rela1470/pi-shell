@@ -47,7 +47,7 @@ for i in $(seq 0 $((${RESERVES_LENGTH} - 1))); do
     if [ ${DELTA} -lt ${RANGE} ]; then
         START_STR=$(date -d @$(($START / 1000)) +%H:%M)
         TITLE=$(echo ${ITEM} | jq .title)
-        STR="${START_STR}『${TITLE}』／"
+        STR="${START_STR}${TITLE}／"
 
         if [ $((${#RE} + ${#TWEET} + ${#STR})) -ge 135 ]; then
             node ${TWIT_JS} "${RE}${TWEET:0:-1}"
