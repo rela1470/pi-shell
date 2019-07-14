@@ -17,5 +17,7 @@ RE=""
 TWIT_JS="/home/pi/chinachu/twit.js"
 
 # 以下処理
-USED_PERCENT=$(df ${RECORDED_DIR} -h | tail -n 1 | tr -s " " , | cut -d , -f 5)
-node ${TWIT_JS} "${RE}Disk使用率は${USED_PERCENT}です。"
+CSV=$(df ${RECORDED_DIR} -h | tail -n 1 | tr -s " " ,)
+DISK_SPACE=$(echo ${CSV}| cut -d , -f 4)
+USED_PERCENT=$(echo ${CSV}| cut -d , -f 5)
+node ${TWIT_JS} "${RE}Disk使用率は${USED_PERCENT}です。空き容量は${DISK_SPACE}です。"
