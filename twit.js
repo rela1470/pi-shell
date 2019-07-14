@@ -10,11 +10,12 @@
 
 const Mtwitter = require('mtwitter');
 
+// 以下のキーは自分で取得して置換してください。
 const tweeter = new Mtwitter({
-    consumer_key       : xxxx,
-    consumer_secret    : xxxx,
-    access_token_key   : xxxx,
-    access_token_secret: xxxx
+    consumer_key       : 'xxxx',
+    consumer_secret    : 'xxxx',
+    access_token_key   : 'xxxx',
+    access_token_secret: 'xxxx'
 });
 
 const tweeterUpdater = (status) => {
@@ -23,9 +24,11 @@ const tweeterUpdater = (status) => {
         { status: status },
         (err, _item) => {
             if (err) {
-                console.error('[Tweeter] Error: ' + JSON.stringify(err));
+                console.error('Error: ' + JSON.stringify(err));
+                process.exit(-1);
             } else {
-                console.log('[Tweeter] Updated: ' + status);
+                console.log('Success: ' + status);
+                process.exit(0);
             }
         }
     );
