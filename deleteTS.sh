@@ -29,6 +29,6 @@ for TS_FILE in ${TS_LIST}; do
         continue
     fi
 
-    rm ${RECORDED_DIR}${TS_FILE}
+    rm "${RECORDED_DIR}${TS_FILE}"
 done
 echo Finished deleting.
