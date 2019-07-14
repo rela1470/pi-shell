@@ -1,3 +1,11 @@
+//====================================================//
+//                                                    //
+//         Copyright (c) 2019 K, Kijinosippo          //
+//                                                    //
+//    This code is released under the MIT License.    //
+//   http://opensource.org/licenses/mit-license.php   //
+//                                                    //
+//====================================================//
 'use strict';
 
 const Mtwitter = require('mtwitter');
