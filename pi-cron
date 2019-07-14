@@ -1,0 +1,24 @@
+SHELL=/bin/bash
+#====================================================#
+#                                                    #
+#         Copyright (c) 2019 K, Kijinosippo          #
+#                                                    #
+#    This code is released under the MIT License.    #
+#   http://opensource.org/licenses/mit-license.php   #
+#                                                    #
+#====================================================#
+
+# エンコード処理(毎日 3:20)
+20  3 * * *     pi      /home/pi/shell/ts2mp4.sh
+
+# 過去データ削除処理(月曜 2:50)
+50  2 * * mon   pi      /home/pi/shell/deleteTS.sh
+
+# 直近の予約番組通知処理(毎日 18:00)
+00 18 * * *     pi      /home/pi/shell/twit_reserves.sh
+
+# 空き容量通知処理(月曜 3:00)
+00  3 * * mon   pi      /home/pi/shell/dfDisk.sh
+
+# 再起動処理(月曜 3:10)
+10  3 * * mon   root    /home/pi/shell/rebooter.sh
