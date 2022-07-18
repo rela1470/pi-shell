@@ -17,5 +17,5 @@ cp config/serviceLogConfig.sample.yml config/serviceLogConfig.yml
 cp config/enc.js.template config/enc.js
 
 # PM2自動スタートアップへの登録
-pm2 start dist/index.js --name "epgstation"
-pm2 save
+sudo pm2 start dist/index.js --name "epgstation"
+sudo pm2 save
