@@ -1,0 +1,6 @@
+curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/01-build-essential.sh | bash -
+#curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/02-build-fw-Q3U4.sh | bash -
+curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/02-build-fw-W3U4.sh | bash -
+curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/03-setup-rec-tools.sh | bash -
+curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/04-setup-mirakurun.sh | bash -
+curl -fsSL https://raw.githubusercontent.com/nrck/pi-shell/master/setup/05-setup-epgstation.sh | bash -
