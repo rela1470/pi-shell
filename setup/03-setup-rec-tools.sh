@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # libarib25のダウンロード
 cd ~
 wget --no-check-certificate https://github.com/stz2012/libarib25/archive/master.zip -O ./libarib25.zip
