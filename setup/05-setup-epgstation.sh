@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # EPGStationのクローン
 cd ~
 git clone https://github.com/l3tnun/EPGStation.git
