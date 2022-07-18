@@ -35,14 +35,14 @@ sudo modprobe px4_drv
 
 # 環境設定
 cat /boot/cmdline.txt | grep coherent_pool=4M
-if `echo $?` -ne 0 ; then
+if [ "$?" -ne "0" ]; then
   echo -n `cat /boot/cmdline.txt` coherent_pool=4M > ./cmdline.txt
   sudo cp ./cmdline.txt /boot/cmdline.txt
   rm ./cmdline.txt
 fi
 
 cat /etc/modules | grep px4_drv
-if `echo $?` -ne 0 ; then
+if [ "$?" -ne "0" ]; then
   cat /etc/modules > ./modules
   echo px4_drv >> ./modules
   sudo cp ./modules /etc/modules
