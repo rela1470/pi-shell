@@ -21,6 +21,7 @@ sudo apt-get install -y --no-install-recommends \
     vim \
     unzip \
     cmake \
+    ffmpeg \
     raspberrypi-kernel \
     raspberrypi-kernel-headers
 
