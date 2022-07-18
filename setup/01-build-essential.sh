@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # パッケージの更新
 sudo apt-get update
 sudo apt-get upgrade -y
