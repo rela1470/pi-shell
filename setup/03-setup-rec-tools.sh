@@ -11,7 +11,7 @@ unzip -o libarib25.zip
 cd libarib25-master
 cmake .
 make
-make install
+sudo make install
 
 # recpt1のダウンロード
 cd ~
@@ -25,7 +25,7 @@ cd recpt1-master/recpt1
 ./autogen.sh
 ./configure --enable-b25
 make
-make install
+sudo make install
 
 # 不要ファイルの削除
 cd ~
