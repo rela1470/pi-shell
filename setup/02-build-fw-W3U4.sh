@@ -48,3 +48,5 @@ if [ "$?" -ne "0" ]; then
   sudo cp ./modules /etc/modules
   rm ./modules
 fi
+
+echo "Setup Finished."
