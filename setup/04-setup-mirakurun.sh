@@ -17,13 +17,17 @@ sudo npm install mirakurun --location=global --production
 sudo mirakurun restart
 
 # Node.jsのバージョン確認
+echo -n "*** Node.js Version: "
 node -v
 
 # npmのバージョン確認
+echo -n "*** npm Version: "
 npm -v
 
 # PM2のバージョン確認
+echo "*** pm2 Version: "
 pm2 -v
 
 # Mirakurunのバージョン確認
+echo "*** Mirakurun Version: "
 sudo mirakurun version
