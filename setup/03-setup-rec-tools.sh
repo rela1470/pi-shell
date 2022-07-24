@@ -33,3 +33,5 @@ rm ./libarib25.zip
 rm -rf libarib25-master
 rm ./recpt1.zip
 rm -rf recpt1-master
+
+echo "Setup Finished."
