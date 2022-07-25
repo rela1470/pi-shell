@@ -20,7 +20,7 @@ cp config/enc.js.template config/enc.js
 ## ffmpegのパスの置換
 sed -i -e "s/usr\/local\/bin/usr\/bin/g" ~/EPGStation/config/config.yml
 ## コーデックの変更
-sed -i -e "s/libx264/h264_omx/g" ~/EPGStation/config/config.yml
+#sed -i -e "s/libx264/h264_omx/g" ~/EPGStation/config/config.yml
 sed -i -e "s/libx264/h264_omx/g" ~/EPGStation/config/enc.js
 
 # PM2自動スタートアップへの登録
