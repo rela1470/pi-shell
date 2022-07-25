@@ -19,3 +19,5 @@ cp config/enc.js.template config/enc.js
 # PM2自動スタートアップへの登録
 sudo pm2 start dist/index.js --name "epgstation"
 sudo pm2 save
+
+echo "Setup Finished."
